@@ -8,18 +8,27 @@ body{
     align-items: center;
 }
 
+.botones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+button{
+    font-size: 20px;
+}
 
 #container{
     display: flex;
     height: 960px;
     width: 960px;
     flex-wrap: wrap;
-    border: 1px solid red;
-
-}
-
-.cuadricula{
-    height: calc(100%/16);
-    width: calc(100%/16);
     border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+
 }
+
+
