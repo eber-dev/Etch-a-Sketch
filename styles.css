@@ -8,12 +8,16 @@ body{
     align-items: center;
 }
 
+.titulo{
+    margin: 25px;
+}
+
 .botones{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 button{

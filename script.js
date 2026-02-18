@@ -11,6 +11,9 @@ function cuadricula16(container,cantidad){
         div.style.height = `calc(100%/${cantidad})`
         div.style.width = `calc(100%/${cantidad})`
         div.style.border = "1px solid black"
+        div.onmouseover = function(){
+            div.style.backgroundColor = coloraleatorio()
+        }
         array.push(div);
     }
 
@@ -23,6 +26,18 @@ function borrado(container){
     array.length=0;
     container.replaceChildren();
     return true;
+}
+
+function coloraleatorio(){
+    const r = Math.floor(Math.random()*256)
+    const g = Math.floor(Math.random()*256)
+    const b = Math.floor(Math.random()*256)
+
+    return `rgb(${r},${g},${b})`    
+}
+
+function oscurecer(div){
+    div.style.opacity = "0.5";
 }
 
 cuadricula16(container,16)
