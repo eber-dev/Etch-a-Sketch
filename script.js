@@ -11,8 +11,16 @@ function cuadricula16(container,cantidad){
         div.style.height = `calc(100%/${cantidad})`
         div.style.width = `calc(100%/${cantidad})`
         div.style.border = "1px solid black"
-        div.onmouseover = function(){
-            div.style.backgroundColor = coloraleatorio()
+        div.dataset.nivel = 0;
+        div.onmouseover = function(){  
+            let nivel = Number(++div.dataset.nivel); //incrementa y luego devuelve
+            if(nivel === 1){
+                div.style.backgroundColor = coloraleatorio()
+            }else if(nivel>1 && nivel<11){
+                div.style.filter=`brightness(${-10*nivel+110}%)`
+            }else{
+                div.style.filter="brightness(0%)"
+            }            
         }
         array.push(div);
     }
@@ -34,10 +42,6 @@ function coloraleatorio(){
     const b = Math.floor(Math.random()*256)
 
     return `rgb(${r},${g},${b})`    
-}
-
-function oscurecer(div){
-    div.style.opacity = "0.5";
 }
 
 cuadricula16(container,16)
