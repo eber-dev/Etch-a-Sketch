@@ -3,7 +3,6 @@ const cambiar = document.querySelector("#btn1")
 const reiniciar = document.querySelector("#btn2")
 const array = []
 
-
 function cuadricula16(container,cantidad){
     for(let i=0; i<Math.pow(cantidad,2);i++){
         const div = document.createElement("div");
