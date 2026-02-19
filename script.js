@@ -47,7 +47,14 @@ function coloraleatorio(){
 cuadricula16(container,16)
 
 cambiar.addEventListener("click",()=>{
-    let cuadro = parseInt(prompt("Ingrese un numero de cuadricula max 100:"))
+    let cuadro
+    let validacion = prompt(("Ingrese un numero de cuadricula max 100:"))
+    if(validacion == null){
+        alert("No se ingreso ningun numero")
+        return
+    }else{
+        cuadro = parseInt(validacion)
+    }
     let condicion = cuadro>100||cuadro<=0
     if(typeof cuadro !== "number" || condicion==true){
         alert("El valor ingresado no es valido")
