@@ -10,9 +10,9 @@ body{
 }
 
 .titulo{
-    margin: 28px;
+    margin: 25px;
     color: blue;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .botones{
@@ -20,11 +20,11 @@ body{
     align-items: center;
     justify-content: center;
     gap: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 button{
-    font-size: 30px;
+    font-size: 22px;
     padding: 5px;
     border-radius: 10px;
     background-color: aqua;
@@ -47,8 +47,8 @@ button:hover{
 
 #container{
     display: flex;
-    height: 960px;
-    width: 960px;
+    height: 700px;
+    width: 700px;
     flex-wrap: wrap;
     border: 1px solid black;
     align-items: center;
